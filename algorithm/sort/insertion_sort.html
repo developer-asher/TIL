@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insertion Sort(삽입정렬)</title>
+  </head>
+  <body>
+    <script>
+      function insertionSort(arr) {
+        for (let i = 1; i < arr.length; i++) {
+          let cur = arr[i];
+          let left = i - 1;
+
+          // 좌측 값들(정렬된 어레이)이 현재 값보다 클 경우에만 while문을 돌며 맞는 자리로 위치함
+          while (left >= 0 && arr[left] > cur) {
+            arr[left + 1] = arr[left];
+            left--;
+          }
+
+          arr[left + 1] = cur;
+        }
+
+        return arr;
+      }
+
+      const input = [3, 7, 2, 5, 1, 4];
+      console.log(insertionSort(input));
+    </script>
+  </body>
+</html>
