@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selection Sort(선택정렬)</title>
+  </head>
+  <body>
+    <script>
+      function selectionSort(arr) {
+        for (let i = 0; i < arr.length - 1; i++) {
+          let minIndex = i; // 시작 인덱스를 최솟값을 일단 지정.
+
+          // 정렬된 값들을 제외하고 최소값으로 설정된 값의 다음 인덱스 부터 비교 시작
+          for (let j = i + 1; j < arr.length; j++) {
+            if (arr[minIndex] > arr[j]) {
+              minIndex = j;
+            }
+          }
+
+          // 제일 작은 값을 선택해서 기억을 해두었다가 마지막에 한번씩 swap
+          let swap = arr[minIndex];
+          arr[minIndex] = arr[i];
+          arr[i] = swap; // 왼쪽부터 오름차순으로 최종위치 확정
+
+          console.log(`${i}회전: ${arr}`);
+        }
+
+        return arr;
+      }
+
+      const input = [5, 10, 3, 55, 7];
+      console.log(selectionSort(input));
+    </script>
+  </body>
+</html>
