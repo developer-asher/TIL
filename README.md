@@ -17,3 +17,6 @@
   - [삽입정렬](https://github.com/developer-asher/TIL/blob/main/algorithm/sort/insertion_sort.md)
   - [선택정렬](https://github.com/developer-asher/TIL/blob/main/algorithm/sort/selection_sort.md)
   - [합병정렬](https://github.com/developer-asher/TIL/blob/main/algorithm/sort/merge_sort.md)
+- 기본 자료구조
+  - [스택](https://github.com/developer-asher/TIL/blob/main/algorithm/stack/stack.md)
+  - [큐](https://github.com/developer-asher/TIL/blob/main/algorithm/queue/queue.md)
